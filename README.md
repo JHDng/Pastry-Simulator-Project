@@ -20,7 +20,7 @@ Assume that all quantities are integers greater than zero, regardless of the uni
 
 The input text file begins with a line containing two integers: the delivery driver’s periodicity and the truck’s capacity. This is followed by a sequence of commands, one per line, in the following format. All non-negative integers are 32-bit encodable.
 
-aggiungi_ricetta ⟨recipe_name⟩ ⟨ingredient_name⟩ ⟨quantity⟩ ... 
+aggiungi_ricetta ⟨recipe_name⟩ ⟨ingredient_name⟩ ⟨quantity⟩ ...\
 Example: aggiungi_ricetta meringhe_della_prozia zucchero 100 albumi 100 
 Adds a recipe to the catalog. The number of pairs (⟨ingredient_name⟩ ⟨quantity⟩) is arbitrary. If a recipe with the same name already exists, it is ignored. 
 Expected output: aggiunta or ignorato. 
