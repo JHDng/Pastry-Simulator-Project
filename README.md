@@ -23,21 +23,21 @@ The input text file begins with a line containing two integers: the delivery dri
 aggiungi_ricetta ⟨recipe_name⟩ ⟨ingredient_name⟩ ⟨quantity⟩ ...\
 Example: aggiungi_ricetta meringhe_della_prozia zucchero 100 albumi 100\
 Adds a recipe to the catalog. The number of pairs (⟨ingredient_name⟩ ⟨quantity⟩) is arbitrary. If a recipe with the same name already exists, it is ignored.\
-Expected output: aggiunta or ignorato.\
+Expected output: aggiunta or ignorato.
 
 rimuovi_ricetta ⟨recipe_name⟩\
 Example: rimuovi_ricetta cannoncini\
 Removes a recipe from the catalog. Has no effect if the recipe does not exist or if there are pending orders for it that have not yet been delivered.\
-Expected output: rimossa, ordini in sospeso, or non presente.\
+Expected output: rimossa, ordini in sospeso, or non presente.
 
 rifornimento ⟨ingredient_name⟩ ⟨quantity⟩ ⟨expiration⟩ ...\
 Example: rifornimento zucchero 200 150 farina 1000 220\
 The pastry shop is replenished with a set of batches, one per ingredient. The number of batches is arbitrary.\
-Expected output: rifornito.\
+Expected output: rifornito.
 
 ordine ⟨recipe_name⟩ ⟨number_of_items_ordered⟩\
 Example: ordine torta_paradiso 36\
 Places an order for ⟨number_of_items_ordered⟩ desserts made with the recipe ⟨recipe_name⟩.\
-Expected output: accettato or rifiutato if no recipe with the specified name exists.\
+Expected output: accettato or rifiutato if no recipe with the specified name exists.
 
 In addition to the above outputs, the program prints the orders loaded onto the delivery driver’s truck as a sequence of triples ⟨order_arrival_time⟩ ⟨recipe_name⟩ ⟨number_of_items_ordered⟩, one per line, in loading order. Given a delivery driver periodicity of n, the output is generated before processing the commands at time steps kn, where k ∈ {1, 2, ...}. If the truck is empty, the message camioncino vuoto is printed.
